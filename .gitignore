@@ -1,0 +1,24 @@
+# Node.js
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.env
+
+# Build output
+dist
+build
+.cache
+
+# Git
+.git
+
+# IDEs & misc
+.DS_Store
+.vscode
+
+# Logs
+*.log
+
+# Source maps
+*.map
