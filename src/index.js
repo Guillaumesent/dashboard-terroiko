@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
 
+// layouts
+import Admin from "layouts/Admin.js";
+
 // Chart.js setup
 import {
   Chart as ChartJS,
@@ -33,8 +36,6 @@ ChartJS.register(
   Title
 );
 
-// layouts
-import Admin from "layouts/Admin.js";
 
 ReactDOM.render(
   <BrowserRouter>
