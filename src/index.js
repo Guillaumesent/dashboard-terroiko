@@ -5,19 +5,42 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
 
+// Chart.js setup
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  BarController,
+  LineElement,
+  LineController,
+  PointElement,
+  Tooltip,
+  Legend,
+  Title
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  BarController,
+  LineElement,
+  LineController,
+  PointElement,
+  Tooltip,
+  Legend,
+  Title
+);
+
 // layouts
 import Admin from "layouts/Admin.js";
-
-// import Index from "views/Index.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      {/* Route principale vers le dashboard */}
       <Route path="/admin" component={Admin} />
-      {/* Redirection de la racine vers /admin */}
       <Redirect exact from="/" to="/admin" />
-      {/* Fallback vers /admin si route inconnue */}
       <Redirect from="*" to="/admin" />
     </Switch>
   </BrowserRouter>,
